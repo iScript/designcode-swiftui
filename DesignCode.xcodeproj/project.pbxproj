@@ -17,6 +17,7 @@
 		0007825824580BEF00646A52 /* DesignCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0007825724580BEF00646A52 /* DesignCodeUITests.swift */; };
 		0007826624591A2F00646A52 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0007826524591A2F00646A52 /* MenuView.swift */; };
 		0027740124592CF000F2E9F4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027740024592CF000F2E9F4 /* HomeView.swift */; };
+		00933A6F245973F2000F8696 /* HomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00933A6E245973F2000F8696 /* HomeTopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		0007825924580BEF00646A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0007826524591A2F00646A52 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		0027740024592CF000F2E9F4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		00933A6E245973F2000F8696 /* HomeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				0007823924580BE600646A52 /* ContentView.swift */,
 				0007826524591A2F00646A52 /* MenuView.swift */,
 				0027740024592CF000F2E9F4 /* HomeView.swift */,
+				00933A6E245973F2000F8696 /* HomeTopView.swift */,
 				0007823B24580BEF00646A52 /* Assets.xcassets */,
 				0007824024580BEF00646A52 /* LaunchScreen.storyboard */,
 				0007824324580BEF00646A52 /* Info.plist */,
@@ -276,6 +279,7 @@
 				0007823624580BE600646A52 /* AppDelegate.swift in Sources */,
 				0007826624591A2F00646A52 /* MenuView.swift in Sources */,
 				0007823824580BE600646A52 /* SceneDelegate.swift in Sources */,
+				00933A6F245973F2000F8696 /* HomeTopView.swift in Sources */,
 				0027740124592CF000F2E9F4 /* HomeView.swift in Sources */,
 				0007823A24580BE600646A52 /* ContentView.swift in Sources */,
 			);
