@@ -18,8 +18,8 @@ struct UpdateListView: View {
     
     var body: some View {
         NavigationView{
-            List(store.updates){ update in
-                ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+            List{
+                ForEach(store.updates) { update in
                     NavigationLink(destination: UpdateDetailView(update:update)) {
                         HStack {
                             Image(update.image)
@@ -46,15 +46,24 @@ struct UpdateListView: View {
                         .padding(.vertical, 8)
                     }
                 }
+                .onDelete { (indexSet) in
+                    self.store.updates.remove(at: indexSet.first!)
+                }
+                .onMove { (indexSet, int) in
+                    //
+                    print("indexSet:",indexSet)
+                    print("int:",int)
+                    self.store.updates.move(fromOffsets: indexSet, toOffset: int)
+                }
             }
             .navigationBarTitle(Text("Updates"))
-            .navigationBarItems(leading:
-                Button(action: {
-                    self.addUpdate()
-                }){
+            .navigationBarItems(
+                leading:Button(action: {self.addUpdate()}){
                     Text("Add Update")
-                }
+                },
+                trailing: EditButton()
             )
+            
            
         }
     }

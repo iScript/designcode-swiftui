@@ -16,6 +16,8 @@
 		0007824D24580BEF00646A52 /* DesignCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0007824C24580BEF00646A52 /* DesignCodeTests.swift */; };
 		0007825824580BEF00646A52 /* DesignCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0007825724580BEF00646A52 /* DesignCodeUITests.swift */; };
 		0007826624591A2F00646A52 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0007826524591A2F00646A52 /* MenuView.swift */; };
+		000949E8245FB9A8008F7C51 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000949E7245FB9A8008F7C51 /* TabbarView.swift */; };
+		000949EA245FE976008F7C51 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000949E9245FE976008F7C51 /* RingView.swift */; };
 		0027740124592CF000F2E9F4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027740024592CF000F2E9F4 /* HomeView.swift */; };
 		00933A6F245973F2000F8696 /* HomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00933A6E245973F2000F8696 /* HomeTopView.swift */; };
 		00933A71245ABA58000F8696 /* UpdateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00933A70245ABA57000F8696 /* UpdateListView.swift */; };
@@ -56,6 +58,8 @@
 		0007825724580BEF00646A52 /* DesignCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeUITests.swift; sourceTree = "<group>"; };
 		0007825924580BEF00646A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0007826524591A2F00646A52 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		000949E7245FB9A8008F7C51 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		000949E9245FE976008F7C51 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		0027740024592CF000F2E9F4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		00933A6E245973F2000F8696 /* HomeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopView.swift; sourceTree = "<group>"; };
 		00933A70245ABA57000F8696 /* UpdateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateListView.swift; sourceTree = "<group>"; };
@@ -118,8 +122,10 @@
 				00933A70245ABA57000F8696 /* UpdateListView.swift */,
 				00933A72245AC5F5000F8696 /* UpdateDetailView.swift */,
 				00933A74245ACAC5000F8696 /* UpdateStore.swift */,
+				000949E9245FE976008F7C51 /* RingView.swift */,
 				0027740024592CF000F2E9F4 /* HomeView.swift */,
 				00933A6E245973F2000F8696 /* HomeTopView.swift */,
+				000949E7245FB9A8008F7C51 /* TabbarView.swift */,
 				0007823B24580BEF00646A52 /* Assets.xcassets */,
 				0007824024580BEF00646A52 /* LaunchScreen.storyboard */,
 				0007824324580BEF00646A52 /* Info.plist */,
@@ -290,9 +296,11 @@
 				0007826624591A2F00646A52 /* MenuView.swift in Sources */,
 				00933A73245AC5F5000F8696 /* UpdateDetailView.swift in Sources */,
 				0007823824580BE600646A52 /* SceneDelegate.swift in Sources */,
+				000949EA245FE976008F7C51 /* RingView.swift in Sources */,
 				00933A71245ABA58000F8696 /* UpdateListView.swift in Sources */,
 				00933A6F245973F2000F8696 /* HomeTopView.swift in Sources */,
 				0027740124592CF000F2E9F4 /* HomeView.swift in Sources */,
+				000949E8245FB9A8008F7C51 /* TabbarView.swift in Sources */,
 				0007823A24580BE600646A52 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
