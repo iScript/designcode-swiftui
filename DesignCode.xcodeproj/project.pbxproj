@@ -26,6 +26,7 @@
 		00933A71245ABA58000F8696 /* UpdateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00933A70245ABA57000F8696 /* UpdateListView.swift */; };
 		00933A73245AC5F5000F8696 /* UpdateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00933A72245AC5F5000F8696 /* UpdateDetailView.swift */; };
 		00933A75245ACAC5000F8696 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00933A74245ACAC5000F8696 /* UpdateStore.swift */; };
+		00FCD1C1246107440037CDA8 /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCD1C0246107440037CDA8 /* CourseListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		00933A70245ABA57000F8696 /* UpdateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateListView.swift; sourceTree = "<group>"; };
 		00933A72245AC5F5000F8696 /* UpdateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetailView.swift; sourceTree = "<group>"; };
 		00933A74245ACAC5000F8696 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
+		00FCD1C0246107440037CDA8 /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				00933A74245ACAC5000F8696 /* UpdateStore.swift */,
 				000949E9245FE976008F7C51 /* RingView.swift */,
 				0027740024592CF000F2E9F4 /* HomeView.swift */,
+				00FCD1C0246107440037CDA8 /* CourseListView.swift */,
 				00933A6E245973F2000F8696 /* HomeTopView.swift */,
 				000949EB24600ACE008F7C51 /* Modifiers.swift */,
 				000949E7245FB9A8008F7C51 /* TabbarView.swift */,
@@ -321,6 +324,7 @@
 				00933A6F245973F2000F8696 /* HomeTopView.swift in Sources */,
 				0027740124592CF000F2E9F4 /* HomeView.swift in Sources */,
 				000949E8245FB9A8008F7C51 /* TabbarView.swift in Sources */,
+				00FCD1C1246107440037CDA8 /* CourseListView.swift in Sources */,
 				0007823A24580BE600646A52 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

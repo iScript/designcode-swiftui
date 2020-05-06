@@ -12,15 +12,22 @@ struct HomeView: View {
     
     @State var showProfile = false
     @State var viewState = CGSize.zero
+    @State var showContent = false
     
     var body: some View {
         ZStack {
             
             Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).edgesIgnoringSafeArea(.all)
             
-            HomeTopView(showProfile: $showProfile)
+            HomeTopView(showProfile: $showProfile,showContent: $showContent)
                 .padding(.top, 44)
-                .background(Color.white)
+                .background(
+                    VStack {
+                        LinearGradient(gradient: Gradient(colors: [Color("background2"),Color.white]), startPoint: .top, endPoint: .bottom).frame(height:200)
+                        Spacer()
+                    }
+                    .background(Color.white)
+                )
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
                 .offset(y:showProfile ? -450 : 0)
@@ -54,6 +61,32 @@ struct HomeView: View {
                         self.viewState = .zero
                     })
                 )
+                
+            // 通过if展示新界面
+            if showContent{
+                Color.white.edgesIgnoringSafeArea(.all)
+                ContentView()
+                
+                // 右上角关闭
+                VStack {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "xmark")
+                            .frame(width: 36, height: 36)
+                            .foregroundColor(.white)
+                            .background(Color.black)
+                            .clipShape(Circle())
+                    }
+                    Spacer()
+                }
+                .offset(x:-16,y:16)
+                .transition(.move(edge: .top))
+                .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0))
+                .onTapGesture {
+                    self.showContent = false
+                }
+            }
+            
             
         
         }
