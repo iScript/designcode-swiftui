@@ -15,15 +15,25 @@ struct Post : Codable,Identifiable{
 }
 
 class Api{
-    func getPosts(){
+    
+    // js : getPosts(function(post){ })
+    // escaping 逃逸，执行这个匿名函数的时候主函数已经执行完了
+    func getPosts(completion : @escaping ([Post]) -> () ){
         print(1100)
         guard let url = URL(string: "http://jsonplaceholder.typicode.com/posts") else{ return }
         URLSession.shared.dataTask(with: url) { (data, _ , _) in
-            //
-            print(22)
-            let posts = try! JSONDecoder().decode([Post].self, from: data!)
-            print(posts)
-            print(33)
+            
+            // guard let 和if let一样，解包不为空
+            guard let data = data else{ return }
+            
+            let posts = try! JSONDecoder().decode([Post].self, from: data)
+            print(posts.count)
+
+            DispatchQueue.main.async {
+                completion(posts)
+            }
+            
+            
         }
         .resume()   //激活请求任务
     }

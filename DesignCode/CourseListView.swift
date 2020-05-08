@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CourseListView: View {
 
-    @State var courses = courseData
+//    @State var courses = courseData
+    @ObservedObject var store = CourseStore()
+    
     @State var active = false
     @State var activeIndex = -1
     @State var activeView = CGSize.zero
@@ -20,6 +23,7 @@ struct CourseListView: View {
             Color.black.opacity(Double(self.activeView.height/500))
                 .animation(.linear)
                 .edgesIgnoringSafeArea(.all)
+                
             
             ScrollView {
                 VStack(spacing:30) {
@@ -29,24 +33,24 @@ struct CourseListView: View {
                         .padding(.top,30)
                         .blur(radius: active ? 20 : 0 )
                     
-                    ForEach(courses.indices,id:\.self) { index in
+                    ForEach(self.store.courses.indices,id:\.self) { index in
                         GeometryReader {geometry in
                             CourseView(
-                                show: self.$courses[index].show,
-                                course: self.courses[index],
+                                show: self.$store.courses[index].show,
+                                course: self.store.courses[index],
                                 active: self.$active ,
                                 index: index,
                                 activeIndex: self.$activeIndex,
                                 activeView: self.$activeView)
-                                .offset(y:self.courses[index].show ? -geometry.frame(in:.global).minY : 0 )   //获取全局的frame？
+                                .offset(y:self.store.courses[index].show ? -geometry.frame(in:.global).minY : 0 )   //获取全局的frame？
                                 // 有active并且不是自己，则隐藏
                                 .opacity(self.activeIndex != index && self.active ? 0 : 1)
                                 .scaleEffect(self.activeIndex != index && self.active ? 0.5 : 1)
                                 .offset(x: self.activeIndex != index && self.active ? screen.width : 0  )
                         }
                         .frame(height: 280)
-                        .frame(maxWidth: self.courses[index].show ?  .infinity : screen.width-60)
-                        .zIndex(self.courses[index].show ? 1 : 0 )
+                        .frame(maxWidth: self.store.courses[index].show ?  .infinity : screen.width-60)
+                        .zIndex(self.store.courses[index].show ? 1 : 0 )
                     }
                 }
                 .frame(width:screen.width)
@@ -115,7 +119,8 @@ struct CourseView: View {
                     }
                 }
                 Spacer()
-                Image(uiImage: course.image)
+                //Image(uiImage: course.image)
+                WebImage(url: course.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit )
                     .frame(maxWidth:.infinity)
@@ -209,14 +214,21 @@ struct Course: Identifiable {
     var id = UUID()
     var title: String
     var subtitle: String
-    var image: UIImage
+    var image: URL
     var logo: UIImage
     var color: UIColor
     var show: Bool
 }
 
+//var courseData = [
+//    Course(title: "About Machine Learning hub", subtitle: "18 Sections", image: #imageLiteral(resourceName: "Card2"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), show: false),
+//    Course(title: "SwiftUI Advanced", subtitle: "20 Sections", image: #imageLiteral(resourceName: "Card6"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), show: false),
+//    Course(title: "Prototype Designs in SwiftUI", subtitle: "20 Sections", image: #imageLiteral(resourceName: "Card5"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), show: false)
+//]
+
 var courseData = [
-    Course(title: "About Machine Learning hub", subtitle: "18 Sections", image: #imageLiteral(resourceName: "Card2"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), show: false),
-    Course(title: "SwiftUI Advanced", subtitle: "20 Sections", image: #imageLiteral(resourceName: "Card6"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), show: false),
-    Course(title: "Prototype Designs in SwiftUI", subtitle: "20 Sections", image: #imageLiteral(resourceName: "Card5"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), show: false)
+    Course(title: "Prototype Designs in SwiftUI", subtitle: "18 Sections", image: URL(string: "https://dl.dropbox.com/s/pmggyp7j64nvvg8/Certificate%402x.png?dl=0")!, logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), show: false),
+    Course(title: "SwiftUI Advanced", subtitle: "20 Sections", image: URL(string: "https://dl.dropbox.com/s/i08umta02pa09ns/Card3%402x.png?dl=0")!, logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), show: false),
+    Course(title: "UI Design for Developers", subtitle: "20 Sections", image: URL(string: "https://dl.dropbox.com/s/etdzsafqqeq0jjg/Card6%402x.png?dl=0")!, logo: #imageLiteral(resourceName: "Logo3"), color: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), show: false)
 ]
+

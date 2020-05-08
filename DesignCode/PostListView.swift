@@ -9,12 +9,25 @@
 import SwiftUI
 
 struct PostListView: View {
+    
+    //@State var posts :[Post] = []
+    @ObservedObject var store = DataStore()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .onAppear(perform: {
-                print(11)
-                 Api().getPosts()
-            })
+        List(store.posts) { post in
+            VStack(alignment: .leading, spacing: 8) {
+                Text(post.title).font(.system(.title, design: .serif)).bold()
+                Text(post.body).font(.subheadline).foregroundColor(.secondary)
+            }
+           
+                
+        }
+//        .onAppear(perform: {
+//            print(11)
+//            Api().getPosts { (posts) in
+//                self.posts = posts
+//            }
+//        })
             
     }
 }
