@@ -15,9 +15,9 @@ struct TabbarView: View {
                 Image(systemName: "play.circle.fill")
                 Text("Home")
             }
-            ContentView().tabItem {
+            CourseListView().tabItem {
                 Image(systemName: "rectangle.stack.fill")
-                Text("Certificates")
+                Text("Courses")
             }
         }
         .edgesIgnoringSafeArea(.top)
