@@ -22,10 +22,16 @@
 		00094A2024601043008F7C51 /* ChelseaMarket-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00094A1E24601043008F7C51 /* ChelseaMarket-Regular.ttf */; };
 		00094A2124601043008F7C51 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00094A1F24601043008F7C51 /* OFL.txt */; };
 		0027740124592CF000F2E9F4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027740024592CF000F2E9F4 /* HomeView.swift */; };
+		00348C94246A519900E941F0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 00348C93246A519900E941F0 /* Lottie */; };
+		00348C96246A747D00E941F0 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00348C95246A747D00E941F0 /* LottieView.swift */; };
+		00348C98246A788000E941F0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00348C97246A788000E941F0 /* LoadingView.swift */; };
+		00348C9A246A7F7C00E941F0 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00348C99246A7F7C00E941F0 /* SuccessView.swift */; };
 		003ECC672465400500509658 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 003ECC662465400500509658 /* SDWebImageSwiftUI */; };
 		003ECC692465447F00509658 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003ECC682465447F00509658 /* BlurView.swift */; };
 		003ECC6B24669DB800509658 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003ECC6A24669DB800509658 /* ButtonsView.swift */; };
 		003ECC6D2469382200509658 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003ECC6C2469382200509658 /* LoginView.swift */; };
+		003ECC71246A431000509658 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 003ECC6F246A431000509658 /* loading.json */; };
+		003ECC72246A431000509658 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 003ECC70246A431000509658 /* success.json */; };
 		0083901C2463E2EC0079D932 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083901B2463E2EC0079D932 /* DataStore.swift */; };
 		0083901F2463E9210079D932 /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = 0083901E2463E9210079D932 /* Contentful */; };
 		008390212464F3570079D932 /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008390202464F3570079D932 /* CourseStore.swift */; };
@@ -78,9 +84,14 @@
 		00094A1E24601043008F7C51 /* ChelseaMarket-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChelseaMarket-Regular.ttf"; sourceTree = "<group>"; };
 		00094A1F24601043008F7C51 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		0027740024592CF000F2E9F4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		00348C95246A747D00E941F0 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		00348C97246A788000E941F0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		00348C99246A7F7C00E941F0 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		003ECC682465447F00509658 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		003ECC6A24669DB800509658 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		003ECC6C2469382200509658 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		003ECC6F246A431000509658 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		003ECC70246A431000509658 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		0083901B2463E2EC0079D932 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		008390202464F3570079D932 /* CourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
 		00933A6E245973F2000F8696 /* HomeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopView.swift; sourceTree = "<group>"; };
@@ -100,6 +111,7 @@
 			files = (
 				003ECC672465400500509658 /* SDWebImageSwiftUI in Frameworks */,
 				0083901F2463E9210079D932 /* Contentful in Frameworks */,
+				00348C94246A519900E941F0 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,11 +172,15 @@
 				00FCD1C0246107440037CDA8 /* CourseListView.swift */,
 				003ECC6A24669DB800509658 /* ButtonsView.swift */,
 				003ECC682465447F00509658 /* BlurView.swift */,
+				00348C95246A747D00E941F0 /* LottieView.swift */,
+				00348C97246A788000E941F0 /* LoadingView.swift */,
+				00348C99246A7F7C00E941F0 /* SuccessView.swift */,
 				00FCD1C224629A150037CDA8 /* CourseDetailView.swift */,
 				00933A6E245973F2000F8696 /* HomeTopView.swift */,
 				000949EB24600ACE008F7C51 /* Modifiers.swift */,
 				000949E7245FB9A8008F7C51 /* TabbarView.swift */,
 				0007823B24580BEF00646A52 /* Assets.xcassets */,
+				003ECC6E246A431000509658 /* Lottie */,
 				00094A1D24601043008F7C51 /* Chelsea_Market */,
 				0007824024580BEF00646A52 /* LaunchScreen.storyboard */,
 				0007824324580BEF00646A52 /* Info.plist */,
@@ -208,6 +224,15 @@
 			path = Chelsea_Market;
 			sourceTree = "<group>";
 		};
+		003ECC6E246A431000509658 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				003ECC6F246A431000509658 /* loading.json */,
+				003ECC70246A431000509658 /* success.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +252,7 @@
 			packageProductDependencies = (
 				0083901E2463E9210079D932 /* Contentful */,
 				003ECC662465400500509658 /* SDWebImageSwiftUI */,
+				00348C93246A519900E941F0 /* Lottie */,
 			);
 			productName = DesignCode;
 			productReference = 0007823224580BE600646A52 /* DesignCode.app */;
@@ -303,6 +329,7 @@
 			packageReferences = (
 				0083901D2463E9210079D932 /* XCRemoteSwiftPackageReference "contentful.swift" */,
 				003ECC652465400500509658 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				00348C92246A519900E941F0 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 0007823324580BE600646A52 /* Products */;
 			projectDirPath = "";
@@ -322,7 +349,9 @@
 			files = (
 				00094A2124601043008F7C51 /* OFL.txt in Resources */,
 				0007824224580BEF00646A52 /* LaunchScreen.storyboard in Resources */,
+				003ECC71246A431000509658 /* loading.json in Resources */,
 				00094A2024601043008F7C51 /* ChelseaMarket-Regular.ttf in Resources */,
+				003ECC72246A431000509658 /* success.json in Resources */,
 				0007823F24580BEF00646A52 /* Preview Assets.xcassets in Resources */,
 				0007823C24580BEF00646A52 /* Assets.xcassets in Resources */,
 			);
@@ -358,18 +387,21 @@
 				003ECC6B24669DB800509658 /* ButtonsView.swift in Sources */,
 				00933A73245AC5F5000F8696 /* UpdateDetailView.swift in Sources */,
 				00FCD1C324629A150037CDA8 /* CourseDetailView.swift in Sources */,
+				00348C96246A747D00E941F0 /* LottieView.swift in Sources */,
 				000949EC24600ACE008F7C51 /* Modifiers.swift in Sources */,
 				0007823824580BE600646A52 /* SceneDelegate.swift in Sources */,
 				000949EA245FE976008F7C51 /* RingView.swift in Sources */,
 				00933A71245ABA58000F8696 /* UpdateListView.swift in Sources */,
 				00FCD1C82462A1A80037CDA8 /* PostListView.swift in Sources */,
 				00933A6F245973F2000F8696 /* HomeTopView.swift in Sources */,
+				00348C9A246A7F7C00E941F0 /* SuccessView.swift in Sources */,
 				003ECC6D2469382200509658 /* LoginView.swift in Sources */,
 				0027740124592CF000F2E9F4 /* HomeView.swift in Sources */,
 				000949E8245FB9A8008F7C51 /* TabbarView.swift in Sources */,
 				003ECC692465447F00509658 /* BlurView.swift in Sources */,
 				00FCD1C1246107440037CDA8 /* CourseListView.swift in Sources */,
 				0007823A24580BE600646A52 /* ContentView.swift in Sources */,
+				00348C98246A788000E941F0 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +567,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
 				DEVELOPMENT_TEAM = F438GUQ9AS;
 				ENABLE_PREVIEWS = YES;
@@ -555,6 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
 				DEVELOPMENT_TEAM = F438GUQ9AS;
 				ENABLE_PREVIEWS = YES;
@@ -696,6 +730,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		00348C92246A519900E941F0 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
 		003ECC652465400500509658 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
@@ -715,6 +757,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		00348C93246A519900E941F0 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00348C92246A519900E941F0 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		003ECC662465400500509658 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 003ECC652465400500509658 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
