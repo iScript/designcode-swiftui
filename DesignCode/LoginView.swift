@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LoginView: View {
     
@@ -18,6 +19,7 @@ struct LoginView: View {
     @State var alertMessage = "somethine want wrong"
     @State var isLoading = false
     @State var isSuccess = false
+    @EnvironmentObject var user : UserStore
     
     func hideKeyboard(){
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -28,13 +30,33 @@ struct LoginView: View {
         self.isFocused = false
         self.isLoading = true
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+        // 模拟
+//        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+//            self.isLoading = false
+//            // self.showAlert = true
+//            self.isSuccess = true
+//
+//            DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+//                self.isSuccess = false
+//            }
+//        }
+        
+        // firebase 登陆 ，需要模拟器测试
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             self.isLoading = false
-            // self.showAlert = true
-            self.isSuccess = true
-            
-            DispatchQueue.main.asyncAfter(deadline: .now()+2) {
-                self.isSuccess = false
+            if error != nil {
+                self.alertMessage = error?.localizedDescription ?? ""
+                self.showAlert = true
+            }else{
+                self.isSuccess = true
+                self.user.isLogin = true
+                
+                DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+                    self.isSuccess = false
+                    self.email = ""
+                    self.password = ""
+                    self.user.showLogin = false
+                }
             }
         }
     }
